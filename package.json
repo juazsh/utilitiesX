@@ -1,0 +1,33 @@
+{
+  "name": "utilitiesx",
+  "version": "1.0.0",
+  "description": "App for mundane task",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon main",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juazsh/utilitiesX.git"
+  },
+  "keywords": [
+    "[convert-csv-to-json",
+    "currency-convertor]"
+  ],
+  "author": "Junaid Azhar Shaikh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juazsh/utilitiesX/issues"
+  },
+  "homepage": "https://github.com/juazsh/utilitiesX#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-cron": "^3.0.2",
+    "node-xlsx": "^0.21.0",
+    "puppeteer": "^19.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
