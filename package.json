@@ -4,7 +4,9 @@
   "description": "App for mundane task",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon main",
+    "vue-client": "npm run serve --prefix ./ui",
+    "server": "nodemon main.js",
+    "dev": "concurrently \"npm run server\" \"npm run vue-client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +30,7 @@
     "puppeteer": "^19.3.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "concurrently": "^7.3.0"
   }
 }
