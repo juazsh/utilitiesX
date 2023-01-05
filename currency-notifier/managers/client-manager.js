@@ -1,4 +1,4 @@
-const { insertUpdateClient } = require('./../db/repositories/client-repository');
+const { insertUpdateClient, getClientsToNotify_db } = require('./../db/repositories/client-repository');
 function clientManager() {
     async function addUpdateClient(client){
         const _id = `${client.email}_${client.currency}`;
@@ -10,6 +10,9 @@ function clientManager() {
             notified: false
         });
     }
-    return { addUpdateClient }
+    async function getClientsToNotify(){
+        return await getClientsToNotify_db();
+    }
+    return { addUpdateClient, getClientsToNotify }
 }
 module.exports = clientManager();
